@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body style="background-color: black;color:white">
+<ul class="language">
+    <li>javascript</li>
+</ul>
+
+    
+    
+</body>
+<script>
+
+    function addLanguage(addLang){
+const add= document.createElement('li');
+
+add.innerHTML=`${addLang}`
+document.querySelector('.language').appendChild(add)
+
+
+    }
+    addLanguage("python");
+    function addNode(lang){
+        const add=document.createElement('li');
+        add.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(add)
+    }
+    addNode("goLang")// this is optimise way of adding any element
+
+    // edit
+   const secondLang= document.querySelector('li:nth-child(2)')
+//    secondLang.innerHTML="Mojo"
+  const newLine= document.createElement('li')
+newLine.textContent="Mojo"
+secondLang.replaceWith(newLine)
+// remove
+const lango=document.querySelector('li:last-child')
+lango.remove()
+
+</script>
+</html>
