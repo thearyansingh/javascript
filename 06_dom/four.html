@@ -16,15 +16,15 @@
 </body>
 <script>
 
-    function addLanguage(addLang){
+    function addLanguage(addingLang){
 const add= document.createElement('li');
 
-add.innerHTML=`${addLang}`
+add.innerHTML=`${addingLang}`
 document.querySelector('.language').appendChild(add)
 
 
     }
-    addLanguage("python");
+    addLanguage("rust");
     function addNode(lang){
         const add=document.createElement('li');
         add.appendChild(document.createTextNode(lang))
@@ -33,13 +33,13 @@ document.querySelector('.language').appendChild(add)
     addNode("goLang")// this is optimise way of adding any element
 
     // edit
-   const secondLang= document.querySelector('li:nth-child(2)')
+   const secondLang= document.querySelector('li:nth-child(1)')
 //    secondLang.innerHTML="Mojo"
   const newLine= document.createElement('li')
 newLine.textContent="Mojo"
 secondLang.replaceWith(newLine)
 // remove
-const lango=document.querySelector('li:last-child')
+const lango=document.querySelector('li:nth-child(2)')
 lango.remove()
 
 </script>
