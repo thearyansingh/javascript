@@ -19,12 +19,12 @@
     function addLanguage(addingLang){
 const add= document.createElement('li');
 
-add.innerHTML=`${addingLang}`
+add.appendChild(document.createTextNode(addingLang))
 document.querySelector('.language').appendChild(add)
 
 
     }
-    addLanguage("rust");
+    addLanguage("python");
     function addNode(lang){
         const add=document.createElement('li');
         add.appendChild(document.createTextNode(lang))
