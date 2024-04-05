@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+<body>
+    <h1> hello aryan</h1>
+    <button id="btn1">Start</button>
+    <button id="btn2">STOP</button>
+</body>
+<script>
+
+    const saydate=function(str){
+document.querySelector('h1').innerHTML=`${str}`
+console.log(str,Date.now())
+}
+let changes;
+function start(){
+ changes=setInterval(saydate,1000,"hi")
+}
+function stop(){
+    clearInterval(changes)
+}
+document.querySelector('#btn1').addEventListener('click',function(){
+if(changes){
+    stop()
+}
+else{
+start();
+}
+})
+
+
+// clearInterval(changes)
+
+// document.querySelector('#btn1').addEventListener('click',function(){
+//     setTimeout(changes);
+// })
+// document.querySelector('#btn2').addEventListener('click',function(){
+//   console.log( clearTimeout(changes))
+// })
+
+</script>
+</html>
