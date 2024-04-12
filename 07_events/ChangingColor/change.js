@@ -10,13 +10,13 @@ const randomcolor=()=>{
   }
   let interval;
   const startchangingcolor=()=>{
-  interval=setInterval(changecolour,1000)
+interval=setInterval(changingColor,2000)
   }
-  function changecolour(){
-    document.body.style.backgroundColor=randomcolor();
+  const changingColor=()=>{
+document.body.style.backgroundColor=randomcolor()
   }
   const stopchangingcolor=()=>{
-    clearInterval(interval);
+    clearInterval(interval)
   }
   document.querySelector("#start").addEventListener('click',startchangingcolor)
   document.querySelector("#stop").addEventListener('click',stopchangingcolor)
